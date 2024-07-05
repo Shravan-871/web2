@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sortAlphaNumeric(arr) {
+            return arr.sort((a, b) => {
+                const typeA = typeof a;
+                const typeB = typeof b;
+                // console.log(a+" "+b);
+                // console.log("**********");
+
+                if (typeA === "number" && typeB === "number") {
+                    return a - b;
+                }
+
+                if (typeA === "number" && typeB !== "number") {
+                    return -1;
+                } else if (typeA !== "number" && typeB === "number") {
+                    return 1;
+                }
+
+                return a.localeCompare(b);
+            });
+        }
+
+        const list = [15, "apple10", "banana2", "car", "100", "0", 10];
+        console.log(list);
+        const sortedList = sortAlphaNumeric(list);
+        console.log(sortedList);
+    </script>
+</body>
+
+</html>
