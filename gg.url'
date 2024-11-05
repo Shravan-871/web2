@@ -1,0 +1,9 @@
+const createShortcutUrl = require('create-url-shortcut');
+
+var shortcut = createShortcutUrl('https://1drv.ms/x/s!ArHmpLI8uz-rgz7D_Khi_jE57k6c?e=cThH4T');
+console.log(shortcut);
+
+// {
+//   value: '[InternetShortcut]\nURL=' + http://google.ch + '\n'',
+//   ext: 'url'
+// };
